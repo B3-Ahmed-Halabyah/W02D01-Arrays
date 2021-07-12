@@ -125,13 +125,155 @@ const nums = [1, 2, 3, 4];
 */
 const addToArray = function (array, string) {
 
-       array.push(string);
-
+    array.push(string);
     console.log(array);
     
   };
     
-  
+
  addToArray(["Hello", "i", "am"], "John"); // => ["Hello", "i", "am", "John"]
-  addToArray(["Hello", "John", "i", "am"], "Jane"); // => ["Hello", "John", "i", "am", "Jane"]
+ addToArray(["Hello", "John", "i", "am"], "Jane"); // => ["Hello", "John", "i", "am", "Jane"]
+ 
+//Q_2
+/*
+Write a function convertToString
+ that accepts an array of strings and
+  returns a string made out of the array values.
+*/
+
+const convertToString = function (array) {
+   
+   let =  array.join("  ");
+    console.log(let);
+
+  };
   
+  convertToString(["Hello", "i", "am", "John"]); // => "Hello i am John"
+  convertToString(["Hello", "John", "i", "am", "Jane"]); // => "Hello John i am Jane"
+  
+
+  //Q_3
+
+  /*Write a function accessElement
+   that accepts two arguments,
+    array and index, and
+     returns the corresponding array element depending on the passed index.
+*/
+const accessElement = function (array, index) {
+     if(array.length < index){
+       console.log("No element at index " + index)
+     }else{
+         console.log(array[index])     
+    
+     }
+  };
+  
+  accessElement([1, 2, 3, 4, 5], 0); // => 1 
+  accessElement([1, 2, 3, 4, 5], 3); // => 4
+  accessElement([1, 2, 3, 4, 5], 10); // => "No element at index 10"
+  
+//Q_4
+/*
+Write a function isInArray that accepts two arguments,array and string,
+ and returns true or false depending
+  on whether the string is an element in the array or not.
+*/
+const isInArray = function (array, string) {
+
+  return  array.includes(string);
+   
+   
+  };
+     isInArray(["John", "Jane", "Mark"], "Jane"); // => true
+     isInArray(["John", "Jane", "Mark"], "Mark"); // => true
+     isInArray(["John", "Jane", "Mark"], "Smith"); // => false
+     isInArray(["John", "Jane", "Mark"], "Smith");// => false
+
+     console.log('----------------------------------------- ');
+  
+//Q_5
+ // split: is a string method that is used to convert a string into an array and the values will be separated depending on the
+// argument passed into the split method (opposite of join)
+const word = "Hello";// if an empty string is passed as an argument then the string will be split on every character
+word.split(" "); // => ["H", "e", "l", "l", "o"]
+// if we pass the letter "e" as an argument, it will split the string on every "e" in that string. Since there is only one "e", the string has split into an array with two elements
+word.split("e"); // => ["H", "llo"]
+// if an empty space (" ") is passed as an argument, the string will be split on every empty space
+const words = "This is a string that contains words";
+words.split(" "); // => ["This", "is", "a", "string", "that", "contains", "words"]
+
+const reverseWords = function (string) {
+
+     
+  var  R  =  word.split("   ");
+    console.log(R);
+};
+reverseWords("Hello"); // => "Hello"
+//reverseWords("Hello World"); // => "World Hello"
+
+console.log('----------------------------------------- ');
+
+//Q_6
+
+// do not use `push` or array assignments, only `unshift`
+const addToLast = function (array, value) {
+    
+      console.log(array.unshift(value));
+      array.shift(value);
+      array[array.length] =value 
+
+       console.log(array);
+
+    //console.log(array.unshift() =[4]);
+};
+
+addToLast([1, 2, 3], 4); // => [1, 2, 3, 4]
+addToLast([10, 6], 1); // => [10, 6, 1]
+
+console.log('----------------------------------------- ');
+
+//Q_7
+
+// write a function `getLength` that accepts an array and returns the
+// length of the array without using the array's attribute `length`
+const getLength = function (array) {
+  // do not use array.length
+  console.log(array);
+      
+};
+
+getLength([1, 2, 3, 4]); // => 3
+getLength([10, 22, 30]); // => 2
+
+// write a function `getFirstVal` that accepts an array and returns the
+// first value of the array without using the index to access the value
+const getFirstVal = function (array) {
+  // do not use array[0]
+  // TODO: Your code here
+};
+
+getFirstVal([1, 2, 3, 4]); // => 1
+getFirstVal([51, 3, 3, 4]); // => 51
+
+console.log('----------------------------------------- ');
+
+//Q_8
+
+// the array values are unique, no duplicate values in the array
+const updateOrCreate = function (array, value, index) {
+   
+   
+
+};
+
+updateOrCreate([10, 20, 30], 50, 1); // => [10, 50, 30]
+//updateOrCreate([10, 20, 30], 40, 3); // => [10, 20, 30, 40]
+//updateOrCreate([10, 20, 30], 100, 10); // => [10, 20, 30, empty * 7, 100]
+
+
+
+
+
+
+
+
