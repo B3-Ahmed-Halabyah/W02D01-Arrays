@@ -238,12 +238,12 @@ console.log('----------------------------------------- ');
 // length of the array without using the array's attribute `length`
 const getLength = function (array) {
   // do not use array.length
-  console.log(array);
+  console.log(array.length);
       
 };
 
-getLength([1, 2, 3, 4]); // => 3
-getLength([10, 22, 30]); // => 2
+getLength([1, 2, 3, 4]); // => 4
+getLength([10, 22, 30]); // => 3
 
 // write a function `getFirstVal` that accepts an array and returns the
 // first value of the array without using the index to access the value
@@ -263,6 +263,9 @@ console.log('----------------------------------------- ');
 const updateOrCreate = function (array, value, index) {
    
    
+   
+  // array.shift();
+  // console.log(array);
 
 };
 
